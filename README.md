@@ -10,5 +10,7 @@
 
 ### 🤡 Credit
 - [Me](https://github.com/debojit-dev)
+- **AnjanaMadu**
+- **Anymous_X**
 
 **Do not forget to follow and give a star✌️**
