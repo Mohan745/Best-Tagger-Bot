@@ -1,0 +1,21 @@
+{
+  "name": "Best-Tagger-Bot",
+  "description": "A simple bot for mention all members in telegram group",
+  "env": {
+    "TOKEN": {
+      "description": "Enter bot token which you get from @BotFather",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get from my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get my.telegram.org",
+      "value": ""
+    }
+  },
+  "buildpacks": [{
+    "url": "https://github.com/heroku/heroku-buildpack-python.git"
+  }]
+}
