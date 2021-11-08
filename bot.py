@@ -15,26 +15,6 @@ api_hash = os.environ.get("API_HASH")
 bot_token = os.environ.get("TOKEN")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
-@client.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
-  await event.reply("__**I am Best Tagger Bot**, I can mention almost all members in group 🔐\n**Click** **/help** for more infomation__\n\n **My Creator** [「𝙳𝚎𝚋𝚘𝚓𝚒𝚝」🇮🇳](https://t.me/coder_debojit)",
-                    buttons=(
-                      [Button.url('📣 Update Channel', 'https://t.me/debojit_update'),
-                      Button.url('💻 Devloper', 'https://t.me/coder_debojit')]
-                    ),
-                    link_preview=False
-                   )
-@client.on(events.NewMessage(pattern="^/help$"))
-async def help(event):
-  helptext = "**Help Menu of Best Tagger Bot**\n\n**Command:** `/mentionall`\n__You can use this command with text what you want to mention others.__\n**Example:** `/mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will tag users to that replied messsage__.\n\n**My Creator** [「𝙳𝚎𝚋𝚘𝚓𝚒𝚝」🇮🇳](https://t.me/coder_debojit)"
-  await event.reply(helptext,
-                    buttons=(
-                      [Button.url('📣 Update Channel', 'https://t.me/debojit_update'),
-                      Button.url('💻 Devloper', 'https://t.me/coder_debojit')]
-                    ),
-                    link_preview=False
-                   )
-  
 @client.on(events.NewMessage(pattern="^/mentionall ?(.*)"))
 async def mentionall(event):
   if event.is_private:
